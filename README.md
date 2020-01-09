@@ -53,8 +53,12 @@ Rubygem's override is reset by Bundler during its setup. Normally this is no iss
 #### It doesn't happen if you don't use Foreman
 `bundle exec karafka server` works great.
 
-#### It doesn't happen if you use binstubs instead
-If the Procfile states `karafka: bin/karafka server` instead of `karafka: bundle exec server`, the issue seems to disappear.
+#### It doesn't happen if it's not Karafka running the boot file
+If the Procfile states `karafka: bundle exec ruby karafka.rb` instead of `karafka: bundle exec karafka server`, the issue seems to disappear.
+
+#### It doesn't happen if you use a karafka binstub instead
+If the Procfile states `karafka: bin/karafka server` instead of `karafka: bundle exec karafka server`, the issue seems to disappear.
+It does happen whether you use a `foreman` binstub or not though.
 
 The open issues related to this app:
 ----
