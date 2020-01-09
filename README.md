@@ -45,7 +45,7 @@ karafka.1 | LoadError: cannot load such file -- /Users/aquaj/Code/external/broke
 Switching to a `config.autoloader = :classic` in `config/application.rb` is enough to fix the issue.
 
 #### It happens when Karakfa `require`s `config/environment.rb`
-Removing the require in `./karafka.rb` is enough for it to work.
+Removing the require in `./karafka.rb` is enough for it to work. It's notable that this line is part of the official Karafka documentation on how to integrate with Rails.
 
 #### It appears to be related to Bundler's Rubygems reset
 Both Rubygems, Zeitwerk and Bundler override `Kernel`'s `require` method.
