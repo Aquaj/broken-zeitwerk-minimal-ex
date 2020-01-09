@@ -4,7 +4,7 @@ Bug replicating app
 The setup:
 ----
 `bundle install`
-The app has been tested with Ruby 2.6.5 and Ruby 2.7.0. (To try it with Ruby 2.7.0 switch to branch ruby-2.7.0)
+The app has been tested with Ruby 2.6.5 and Ruby 2.7.0. (To try it with Ruby 2.6.5 switch to branch master)
 
 The test:
 ----
