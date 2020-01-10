@@ -1,5 +1,7 @@
+puts "=[APPLICATION/PRE-REQ_REL]= #{Bundler.instance_variable_get(:@setup).nil?.inspect}"
 require_relative 'boot'
 
+puts "=[APPLICATION/PRE-REQ]= #{Bundler.instance_variable_get(:@setup).nil?.inspect}"
 require "rails"
 # Pick the frameworks you want:
 require "active_model/railtie"
@@ -15,9 +17,12 @@ require "action_cable/engine"
 # require "sprockets/railtie"
 # require "rails/test_unit/railtie"
 
+puts "=[APPLICATION/PRE-BUNDLER]= #{Bundler.instance_variable_get(:@setup).nil?.inspect}"
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
+p Bundler.method(:require).source_location
 Bundler.require(*Rails.groups)
+puts "=[APPLICATION/POST-BUNDLER]= #{Bundler.instance_variable_get(:@setup).nil?.inspect}"
 
 module BrokenZeitwerkMinimalEx
   class Application < Rails::Application
