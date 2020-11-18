@@ -1,6 +1,19 @@
 Bug replicating app
 =====
 
+---------------
+
+The issue this app is replicating is [FIXED](https://github.com/rubygems/rubygems/pull/4062) as of the 18/11/2020. <br />This repo only will stay up as documentation since it is linked across the issues mentioned below.
+=====
+
+The fix:
+----
+Update Bundler, as it's where the fix has been implemented.
+
+
+---------------
+
+
 The setup:
 ----
 `bundle install`
