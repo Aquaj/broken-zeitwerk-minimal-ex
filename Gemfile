@@ -10,9 +10,6 @@ gem 'rails', '~> 6.0.0'
 gem 'pg'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
-# Manage Procfile-based applications
-# https://github.com/ddollar/foreman
-gem 'foreman', '~> 0.63'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
