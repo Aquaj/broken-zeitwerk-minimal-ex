@@ -9,7 +9,7 @@ gem 'rails', '~> 6.0.0'
 # Postgresql
 gem 'pg'
 # Use Puma as the app server
-gem 'puma', '~> 3.11'
+gem 'puma', '~> 4.3'
 # Manage Procfile-based applications
 # https://github.com/ddollar/foreman
 gem 'foreman', '~> 0.63'
